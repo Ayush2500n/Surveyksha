@@ -71,14 +71,11 @@ fun LastPage(sharedViewModel: ScreensSharedViewModel) {
                 modifier = Modifier.fillMaxWidth(),
                 verticalArrangement = Arrangement.Center
             ) {
-                // Gender
                 val gender = submission.gender?.entries?.joinToString { "${it.key}: ${it.value}" } ?: "Unknown"
                 Text(gender, Modifier.weight(0.4f))
 
-                // Age
                 Text(submission.age.toString(), Modifier.weight(0.4f))
 
-                // Selfie
                 submission.selfie?.let { bitmap ->
                     Image(
                         bitmap = bitmap.asImageBitmap(),

@@ -102,11 +102,11 @@ fun SecondPage(navController: NavHostController, sharedViewModel: ScreensSharedV
                         sharedViewModel.updateAge(ageInt)
                         navController.navigate("ThirdPage")
                     } else {
-                        showError = true // Show error message if age is invalid
+                        showError = true
                     }
                 },
                 colors = color,
-                enabled = !age.isEmpty() // Prevent button click if age is empty
+                enabled = !age.isEmpty()
             ) {
                 Text(text = "Next")
             }
